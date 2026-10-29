@@ -43,7 +43,7 @@ Bread of Life is a community outreach program based in Augusta, Maine, dedicated
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/ArthurBelanger207/maineBreadOfLife.git
+   git clone https://github.com/RunicAudio/maineBreadOfLife.git
    cd maineBreadOfLife
    ```
 

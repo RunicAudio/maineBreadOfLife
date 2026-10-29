@@ -7,9 +7,9 @@ session_start();
  #   CONTACT-US.PHP(HTML Page) | MAINE BREAD OF LIFE
  #   AUTHOR: ARTHUR DANIEL BELANGER JR.
  #	 Email: arthur.belanger@maine.edu
- #   https://github.com/coding-with-arty/maineBreadOfLife
+ #   https://github.com/runicaudio/maineBreadOfLife
  #  ======================================================================
- 
+
 // Generate a new CSRF token if one doesn't exist
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -369,7 +369,7 @@ if (empty($_SESSION['csrf_token'])) {
                                         <!-- Turnstile client script (load once on the page) -->
                                         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-                                        <!-- 
+                                        <!--
                                                 ACTION: Point to your secured PHP handler.
                                                 METHOD: POST required for file upload and CSRF token handling.
                                                 ENCTYPE: Needed for attachments.
@@ -966,8 +966,8 @@ if (empty($_SESSION['csrf_token'])) {
             <div class="credits">
                 <p>
                     Site developed and donated by
-                    <a href="https://github.com/coding-with-arty/maineBreadOfLife" target="_blank" rel="noopener noreferrer" title="Visit Github for raw code.">
-                            Arthur Belanger(coding-with-arty).
+                    <a href="https://github.com/runicaudio/maineBreadOfLife" target="_blank" rel="noopener noreferrer" title="Visit Github for raw code.">
+                            Arthur Belanger(runicaudio).
                         </a>
                 </p>
                 <p>
@@ -980,7 +980,7 @@ if (empty($_SESSION['csrf_token'])) {
                     <a href="privacy-conduct.html" title="Privacy & Conduct Policies">
                             Privacy & Conduct
                         </a> |
-                    <a href="https://github.com/coding-with-arty/License/blob/main/Belanger%20Non-commercial%20Open%20License(BNOL%20v1.0).md" title="MIT License" target="_blank">
+                    <a href="https://github.com/runicaudio/License/blob/main/Belanger%20Non-commercial%20Open%20License(BNOL%20v1.0).md" title="MIT License" target="_blank">
                             MIT License
                         </a>
                 </p>

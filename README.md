@@ -5,7 +5,7 @@
 - [Tour of ART's House - Maine Bread of Life](https://www.youtube.com/watch?v=DNcIMS_XcEY&t=2s)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/coding-with-arty/maineBreadOfLife?style=social)](https://github.com/coding-with-arty/maineBreadOfLife/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/runicaudio/maineBreadOfLife?style=social)](https://github.com/runicaudio/maineBreadOfLife/stargazers)
 
 ## 🌟 About
 
@@ -115,4 +115,4 @@ For more information about Bread of Life, please visit [mainebreadoflife.org](ht
 
 ---
 
-Made with ❤️ by [Arthur](https://github.com/coding-with-arty) for the Bread of Life community.
+Made with ❤️ by [Arthur](https://github.com/runicaudio) for the Bread of Life community.

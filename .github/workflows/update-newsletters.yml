@@ -1,0 +1,61 @@
+name: Generate Newsletter Index from TXT Files
+
+on:
+  push:
+    paths:
+      - 'assets/newsletters/**'
+
+jobs:
+  build-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Parse TXT files and generate newsletters.json
+        run: |
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const dir = "./assets/newsletters";
+
+            if (!fs.existsSync(dir)) process.exit(0);
+
+            const files = fs.readdirSync(dir).filter(f => f.endsWith(".pdf"));
+
+            const data = files.map(pdfFile => {
+              const baseName = pdfFile.replace(".pdf", "");
+              const txtPath = path.join(dir, baseName + ".txt");
+
+              let title = baseName.replace(/[-_]/g, " ");
+              let date = "Community Update";
+              let description = "Read our latest community newsletter.";
+
+              if (fs.existsSync(txtPath)) {
+                const lines = fs.readFileSync(txtPath, "utf8").split("\n");
+                lines.forEach(line => {
+                  if (line.toLowerCase().startsWith("title:")) title = line.split(":").slice(1).join(":").trim();
+                  if (line.toLowerCase().startsWith("date:")) date = line.split(":").slice(1).join(":").trim();
+                  if (line.toLowerCase().startsWith("description:")) description = line.split(":").slice(1).join(":").trim();
+                });
+              }
+
+              return {
+                season: date,
+                title: title,
+                date: date,
+                description: description,
+                pdfUrl: "/assets/newsletters/" + pdfFile
+              };
+            });
+
+            if (!fs.existsSync("./assets/data")) fs.mkdirSync("./assets/data", { recursive: true });
+            fs.writeFileSync("./assets/data/newsletters.json", JSON.stringify(data, null, 2));
+          '
+
+      - name: Commit & Push newsletters.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "auto: update newsletters.json index from txt metadata"

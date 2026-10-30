@@ -1,30 +1,23 @@
 [
   {
     "season": "August 2026",
-    "title": "Providing Hope & Building Community",
+    "title": "Bread of Life Newsletter",
     "date": "August 2026",
-    "description": "July impact snapshot (4,465+ meals served), message from Executive Director Victoria Abbott, and Soup Kitchen cook Willie spotlight.",
+    "description": "July impact snapshot (4,465+ meals served), message from Executive Director Victoria Abbott, and cook Willie spotlight.",
     "pdfUrl": "/assets/newsletters/8-26_newsletter.pdf"
   },
   {
-    "season": "Honoring Leadership 2026",
-    "title": "Bread of Life Leadership News: NorthStar Award",
-    "date": "April 2026",
-    "description": "Honoring Brad Truman as the 2026 Bread of Life NorthStar Award recipient, along with staff appreciation day highlights.",
+    "season": "Fall 2026",
+    "title": "Bread of Life: Honoring Leadership",
+    "date": "Fall 2026",
+    "description": "The North Star Award|Recognizing Brad Truman with the 2026 NorthStar Award and celebrating Staff Appreciation Day.",
     "pdfUrl": "/assets/newsletters/NorthStarLetter.pdf"
   },
   {
-    "season": "Winter 2025",
-    "title": "Winter Warmth & Outreach",
-    "date": "December 2025",
-    "description": "Cold-weather relief efforts across our Augusta shelters and holiday meal distribution.",
-    "pdfUrl": "/assets/newsletters/2025-winter.pdf"
-  },
-  {
-    "season": "Fall 2025",
-    "title": "Ribbon Cutting & Growth",
-    "date": "October 2025",
-    "description": "Celebrating key community partnerships, new housing openings, and veteran support expansion.",
-    "pdfUrl": "/assets/newsletters/2025-fall.pdf"
+    "season": "Summer 2026",
+    "title": "Patrick's Journey",
+    "date": "Summer 2026",
+    "description": "Patrick's Journey - A BOL Success Story|Impact Snapshot and Bread of Life Staff Day.",
+    "pdfUrl": "/assets/newsletters/PatricksJourney.pdf"
   }
 ]

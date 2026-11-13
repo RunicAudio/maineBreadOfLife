@@ -86,5 +86,15 @@
   "terminal.integrated.enableVisualBell": true,
   "terminal.integrated.focusAfterRun": "accessible-buffer",
   "terminal.integrated.hideOnStartup": "whenEmpty",
-  "editor.hover.enabled": "onKeyboardModifier"
+  "editor.hover.enabled": "onKeyboardModifier",
+  "chat.agent.maxRequests": 50,
+  "chat.checkpoints.showFileChanges": true,
+  "inlineChat.affordance": "editor",
+  "inlineChat.notebookAgent": true,
+  "chat.mcp.discovery.enabled": {
+    "cursor-global": true,
+    "cursor-workspace": true
+  },
+  "chat.mcp.autostart": "newAndOutdated",
+  "chat.mcp.workspaceRootConfig.enabled": true
 }

@@ -1048,6 +1048,145 @@
 		<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js" type="text/javascript" defer></script>
 		<script src="https://www.google.com/recaptcha/api.js" type="text/javascript" async defer></script>
 		<script src="/assets/js/main.js" type="text/javascript" defer></script>
+
+		<!-- =====================================================================
+     CELEBRATION POP-UP MODAL (COMMENT OUT THIS ENTIRE BLOCK TO PAUSE)
+     ===================================================================== -->
+		<div id="celebration-modal-wrapper">
+			<style>
+				#celebrationModal .modal-content {
+					border: none;
+					border-radius: 1rem;
+					overflow: hidden;
+					background-color: #ffffff;
+					box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+				}
+
+				#celebrationModal .btn-close-custom {
+					position: absolute;
+					top: 0.75rem;
+					right: 0.75rem;
+					z-index: 10;
+					background-color: rgba(255, 255, 255, 0.9);
+					border-radius: 50%;
+					width: 2.25rem;
+					height: 2.25rem;
+					opacity: 1;
+					box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+				}
+
+				#celebrationModal .btn-close-custom:hover {
+					background-color: #ef6603;
+					/* Matches site --accent-color */
+					filter: invert(1);
+				}
+
+				#celebrationModal img {
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+
+				#celebrationModal .celebration-footer {
+					background-color: #ebf5fb;
+					/* Matches site --background-color */
+					padding: 1rem 1.5rem;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.75rem;
+					justify-content: center;
+					align-items: center;
+					border-top: 1px solid rgba(5, 79, 135, 0.15);
+				}
+
+				#celebrationModal .btn-bol-donate {
+					background-color: #054f87;
+					/* Matches site --heading-color */
+					color: #ffffff;
+					font-family: "Raleway", sans-serif;
+					font-weight: 600;
+					padding: 0.65rem 1.75rem;
+					border-radius: 50px;
+					border: 2px solid #054f87;
+					text-decoration: none;
+					transition: all 0.3s ease;
+				}
+
+				#celebrationModal .btn-bol-donate:hover {
+					background-color: #0d6efd;
+					/* Matches site --color-primary */
+					border-color: #0d6efd;
+					color: #ffffff;
+					transform: translateY(-2px);
+				}
+
+				#celebrationModal .btn-bol-continue {
+					background-color: transparent;
+					color: #555555;
+					font-family: "Raleway", sans-serif;
+					font-weight: 600;
+					padding: 0.65rem 1.5rem;
+					border-radius: 50px;
+					border: 2px solid #cccccc;
+					transition: all 0.3s ease;
+				}
+
+				#celebrationModal .btn-bol-continue:hover {
+					background-color: #e2e8f0;
+					color: #222222;
+					border-color: #bbbbbb;
+				}
+			</style>
+
+			<div class="modal fade" id="celebrationModal" tabindex="-1" aria-labelledby="celebrationModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content position-relative">
+						<button type="button" class="btn-close btn-close-custom" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+
+						<div class="modal-body p-0">
+							<h2 id="celebrationModalLabel" class="visually-hidden">Special Celebration Announcement</h2>
+							<!-- Swap the image path below for each event -->
+							<img src="/assets/img/clients/tuesday.png"
+								alt="Celebrating our special day at Bread of Life" />
+						</div>
+
+						<div class="celebration-footer">
+							<a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=PGTFGX7RU4QHQ"
+								target="_blank" rel="noopener noreferrer" class="btn-bol-donate">
+								<i class="bi bi-paypal me-1" aria-hidden="true"></i> Donate Today
+							</a>
+							<button type="button" class="btn-bol-continue" data-bs-dismiss="modal">
+								Continue to Site
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				window.addEventListener("load", function () {
+					// Quick toggle: set to false to disable without commenting out
+					const ENABLE_MODAL = true;
+
+					// Optional: set to true so visitors only see it once per browser session
+					const SHOW_ONCE_PER_SESSION = false;
+
+					if (!ENABLE_MODAL) return;
+					if (SHOW_ONCE_PER_SESSION && sessionStorage.getItem("bolCelebrationSeen")) return;
+
+					const modalEl = document.getElementById("celebrationModal");
+					if (modalEl && window.bootstrap) {
+						const celebrationModal = new bootstrap.Modal(modalEl);
+						celebrationModal.show();
+						sessionStorage.setItem("bolCelebrationSeen", "true");
+					}
+				});
+			</script>
+		</div>
+		<!-- =================== END CELEBRATION POP-UP MODAL ==================== -->
+
 	</body>
 
 </html>
